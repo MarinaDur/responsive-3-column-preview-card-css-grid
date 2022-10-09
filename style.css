@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --first-column: hsl(31, 77%, 52%);
+  --second-column: hsl(184, 100%, 22%);
+  --third-column: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background-headings-buttons: hsl(0, 0%, 95%);
+  --border-radius: 10px;
+  --font-headings: "Big Shoulders Display", cursive;
+  --font-p-buttons: "Lexend Deca", sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-headings-buttons);
+}
+
+.card-center {
+  width: 85vw;
+  max-width: 1100px;
+  margin: 50px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  padding: 60px 45px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.card h2 {
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+  color: var(--background-headings-buttons);
+  letter-spacing: 1px;
+  font-size: 3rem;
+  padding: 20px 0;
+  margin-top: 18px;
+}
+
+.card p {
+  font-family: var(--font-p-buttons);
+  color: var(--paragraphs);
+  font-size: 15px;
+  margin-top: 18px;
+  word-spacing: 1.5px;
+  letter-spacing: 0.8px;
+  line-height: 2;
+  max-width: 300px;
+}
+
+.card-1 {
+  background-color: var(--first-column);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.card-2 {
+  background-color: var(--second-column);
+}
+.card-3 {
+  background-color: var(--third-column);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+button {
+  padding: 18px 40px;
+  background-color: var(--background-headings-buttons);
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: var(--font-p-buttons);
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  max-width: 180px;
+}
+
+.btn-sedans {
+  color: var(--first-column);
+  font-weight: bold;
+}
+.btn-suvs {
+  color: var(--second-column);
+  font-weight: bold;
+}
+.btn-luxury {
+  color: var(--third-column);
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--background-headings-buttons);
+  border: 2px solid var(--background-headings-buttons);
+}
+
+footer {
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 589px) {
+  .card-1 {
+    border-top-right-radius: 0;
+  }
+
+  .card-2 {
+    border-top-right-radius: var(--border-radius);
+  }
+}
+
+@media screen and (min-width: 882px) {
+  .card-1 {
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  .card-2 {
+    border-top-right-radius: 0;
+  }
+
+  .card-3 {
+    border-top-left-radius: 0;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--border-radius);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  button {
+    margin-top: 90px;
+  }
+}
